@@ -15,3 +15,5 @@ Reviewy is a React application that allows users to search for songs on Spotify 
 - **Frontend**: React.js
 - **API**: Spotify API
 - **Backend**: Firebase for database management
+
+https://reviewy-beta.netlify.app/
