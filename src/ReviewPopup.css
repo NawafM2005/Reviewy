@@ -1,0 +1,232 @@
+.review-popup {
+    padding: 30px;
+    background-color: rgba(18, 25, 40, 0.95);
+    border-radius: 10px;
+    position: fixed; /* Fix it relative to the viewport */
+    top: 50%; /* Position it in the middle vertically */
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center it exactly */
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it is on top of other elements */
+    align-items: center;
+
+    .review-main-section {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 35px;
+        font-weight: bold;
+        text-shadow: 0px 1px 2px rgb(255, 255, 255);
+        color: white;
+    }
+
+    .exit_button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #ff4d4d;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    .exit_button:hover {
+        background-color: #ff1a1a;
+    }
+
+    .song{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 350px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px rgb(255, 59, 59);
+
+        h3{
+            color: rgb(255, 97, 97);
+            text-shadow: 1px 3px 1px rgb(210, 210, 210);
+            pointer-events: none;
+        }
+
+        p{
+            color: white;
+            text-shadow: 2px 1px 2px rgb(0, 0, 0);
+            pointer-events: none;
+        }
+
+        img{
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            pointer-events: none;
+        }
+    }
+
+    .user-review{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 550px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px rgb(255, 59, 59);
+        gap: 20px;
+        font-size: 18px;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .comments-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            label{
+                color: rgb(255, 98, 98);
+                text-shadow: 2px 1px 2px rgb(254, 255, 215);
+                pointer-events: none;
+                font-weight: bold;
+            }
+            
+            textarea{
+                background-color: rgb(255, 175, 175, 0.5);
+                border: none;
+                outline: none;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 16px; 
+                width: 400px;
+                height: 150px;
+                resize: none; /* Prevents resizing if you want a fixed size */
+            }
+        }
+
+        button{
+            width: 400px;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            transition: 0.2s ease-in-out;
+            background-color: rgb(148, 0, 0);
+        }
+    }
+
+    .name{
+        p{
+            color: rgb(255, 98, 98);
+            text-shadow: 2px 1px 2px rgb(254, 255, 215);
+            pointer-events: none;
+            font-weight: bold;
+        }
+        
+        input{
+            flex: 1;
+            background-color: rgb(255, 175, 175, 0.5);
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px; 
+        }
+    }
+
+    .rating{
+        p{
+            color: rgb(255, 98, 98);
+            text-shadow: 2px 1px 2px rgb(254, 255, 215);
+            pointer-events: none;
+            font-weight: bold;
+        }
+        
+        input{
+            width: 200px;
+            background-color: rgb(255, 175, 175, 0.5);
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px; 
+        }
+    }
+
+    .recent_reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 550px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px rgb(255, 59, 59);
+        padding: 20px;
+
+        .all_reviews{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .single_review {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #07daffc5;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 5px 8px rgb(0, 0, 0);
+
+            p{
+                font-size: 15px;
+            }
+        }
+
+        .single_review div{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            p{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+    .no_review{
+        padding: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(255, 98, 98);
+    }
+}
